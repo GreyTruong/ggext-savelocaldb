@@ -1,8 +1,8 @@
 {
-  "name": "Copy Chapter",
+  "name": "Save Chapter to DB",
   "version": "0.1.0",
   "manifest_version": 3,
-  "description": "Copy BNS chapter",
+  "description": "Save BNS chapter",
   "background": {
     "service_worker": "background.js"
   },
@@ -10,6 +10,9 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "externally_connectable": {
+    "matches": ["http://localhost/*"]
+  },
   "permissions": ["storage", "activeTab", "scripting", "tabs"],
-  "host_permissions": ["https://vip.bachngocsach.com/*"]
+  "host_permissions": ["*://*/*"]
 }
